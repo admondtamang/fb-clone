@@ -16,3 +16,7 @@
   font-size: xx-large;
   columns: #2e81f4;
 }
+.sidebarRow .MuiAvatar-root {
+  width: 30px;
+  height: 30px;
+}

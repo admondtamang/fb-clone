@@ -37,7 +37,7 @@ export default function Header() {
 
       <div className="header__right">
         <div className="header__info">
-          <Avatar src={user.photoURL} />
+          <Avatar src={user.photoURL} sizes="x" />
           <h4>{user.displayName.split(" ")[0]}</h4>
         </div>
         <IconButton>
