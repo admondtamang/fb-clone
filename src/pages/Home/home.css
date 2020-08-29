@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "MyFont";
+  src: local("MyFont"), url(../../assets/FACEBOLF.OTF) format("woff");
+}
+.App {
+  font-family: MyFont, Arial, Helvetica, sans-serif;
+  background-color: #f1f2f5;
+  color: #1c1e21;
+}
+.app__body {
+  display: flex;
+  margin: 0 10px;
+  margin-top: 10px;
+}
