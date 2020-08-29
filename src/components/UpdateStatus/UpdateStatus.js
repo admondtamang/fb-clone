@@ -2,17 +2,28 @@ import React, { useState } from "react";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import { Avatar } from "@material-ui/core";
 import "./updateStatus.css";
+import db from "../../firebase";
+import firebase from "firebase";
+import { useSelector } from "react-redux";
 
 export default function UpdateStatus() {
+  const user = useSelector((state) => state.user);
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    db.collection("posts").add({
+      caption: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      profilePic: user.photoURL,
+      username: user.displayName,
+      image: imageUrl,
+    });
   };
   return (
     <div className="updateStatus">
       <div className="updateStatus__form">
-        <Avatar src="https://miro.medium.com/max/3150/2*4An60Vc-r2PGnYJZp78T7g.jpeg" />
+        <Avatar src={user.photoURL} />
         <form>
           <input
             className="updateStatus__input"

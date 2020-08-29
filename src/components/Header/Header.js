@@ -8,7 +8,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import "./header.css";
+import { useSelector } from "react-redux";
 export default function Header() {
+  const user = useSelector((state) => state.user);
   return (
     <div className="header">
       <div className="header__left">
@@ -35,8 +37,8 @@ export default function Header() {
 
       <div className="header__right">
         <div className="header__info">
-          <Avatar src="https://miro.medium.com/max/3150/2*4An60Vc-r2PGnYJZp78T7g.jpeg" />
-          <h4>Admond Tamang</h4>
+          <Avatar src={user.photoURL} />
+          <h4>{user.displayName.split(" ")[0]}</h4>
         </div>
         <IconButton>
           <Add />

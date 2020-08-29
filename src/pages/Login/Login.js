@@ -2,11 +2,15 @@ import React from "react";
 import "./login.css";
 import { Button } from "@material-ui/core";
 import { auth, provider } from "../../firebase";
+import { addUser } from "../../redux";
+import { useDispatch } from "react-redux";
 export default function Login() {
+  const dispatch = useDispatch();
   const signIn = async () => {
     try {
-      const result = auth.signInWithPopup(provider);
-      console.log(result);
+      const result = await auth.signInWithPopup(provider);
+      console.log(result.user);
+      dispatch(addUser(result.user));
     } catch (err) {
       alert(err.message);
     }
@@ -30,7 +34,7 @@ export default function Login() {
         <div className="login__input">
           <input type="password" placeholder="password" />
         </div>
-        <Button color="#156545" variant="contained" onClick={signIn}>
+        <Button color="default" variant="contained" onClick={signIn}>
           Login
         </Button>
       </div>

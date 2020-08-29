@@ -3,7 +3,7 @@
   src: local("MyFont"), url(../../assets/FACEBOLF.OTF) format("woff");
 }
 .App {
-  font-family: MyFont, Arial, Helvetica, sans-serif;
+  /* font-family: MyFont, Arial, Helvetica, sans-serif; */
   background-color: #f1f2f5;
   color: #1c1e21;
 }
