@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 function App() {
   const user = useSelector((state) => state.user);
+  // const user = null;
   return <div className="App">{!user ? <Login /> : <Home />}</div>;
 }
 

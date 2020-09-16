@@ -10,22 +10,22 @@ export default function StoryReel() {
       <Story
         profileSrc="https://lh3.googleusercontent.com/-Op1y_dOReqA/AAAAAAAAAAI/AAAAAAAAA6Y/k-xAXfjbmtA/photo.jpg"
         image="https://pbs.twimg.com/media/DF4RU4WVoAAB2sP.jpg"
-        title="Ramesh Tamang"
+        title="Ram Tamang"
       />
       <Story
         profileSrc="https://lh3.googleusercontent.com/-Op1y_dOReqA/AAAAAAAAAAI/AAAAAAAAA6Y/k-xAXfjbmtA/photo.jpg"
         image="https://pbs.twimg.com/media/DF4RU4WVoAAB2sP.jpg"
-        title="Ramesh Tamang"
+        title="Sita Adhikari"
       />
       <Story
         profileSrc="https://lh3.googleusercontent.com/-Op1y_dOReqA/AAAAAAAAAAI/AAAAAAAAA6Y/k-xAXfjbmtA/photo.jpg"
         image="https://pbs.twimg.com/media/DF4RU4WVoAAB2sP.jpg"
-        title="Ramesh Tamang"
+        title="Geeta rani"
       />
       <Story
         profileSrc="https://lh3.googleusercontent.com/-Op1y_dOReqA/AAAAAAAAAAI/AAAAAAAAA6Y/k-xAXfjbmtA/photo.jpg"
         image="https://pbs.twimg.com/media/DF4RU4WVoAAB2sP.jpg"
-        title="Ramesh Tamang"
+        title="Rita Giri"
       />
     </div>
   );

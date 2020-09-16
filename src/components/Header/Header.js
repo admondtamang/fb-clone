@@ -3,10 +3,16 @@ import Search from "@material-ui/icons/Search";
 import Home from "@material-ui/icons/Home";
 import Flag from "@material-ui/icons/Flag";
 import Add from "@material-ui/icons/Add";
+import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
+import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined";
+import SubscriptionsOutlined from "@material-ui/icons/SubscriptionsOutlined";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
+
+import Tooltip from "@material-ui/core/Tooltip";
 import "./header.css";
 import { useSelector } from "react-redux";
 export default function Header() {
@@ -25,13 +31,30 @@ export default function Header() {
       </div>
       <div className="header__middle">
         <div className="header__option header__option--active">
-          <Home fontSize="large" />
+          <Tooltip title="Home">
+            <Home fontSize="large" />
+          </Tooltip>
+        </div>
+
+        <div className="header__option">
+          <Tooltip title="Pages">
+            <Flag fontSize="large" />
+          </Tooltip>
         </div>
         <div className="header__option">
-          <Flag fontSize="large" />
+          <Tooltip title="Videos">
+            <SubscriptionsOutlined fontSize="large" />
+          </Tooltip>
         </div>
         <div className="header__option">
-          <Home fontSize="large" />
+          <Tooltip title="Shop">
+            <StorefrontOutlinedIcon fontSize="large" />
+          </Tooltip>
+        </div>
+        <div className="header__option">
+          <Tooltip title="Community">
+            <SupervisedUserCircleIcon fontSize="large" />
+          </Tooltip>
         </div>
       </div>
 
@@ -44,6 +67,13 @@ export default function Header() {
           <Add />
         </IconButton>
         <IconButton>
+          <ChatBubbleIcon />
+        </IconButton>
+        <IconButton>
+          <NotificationsIcon />
+        </IconButton>
+
+        <IconButton onClick={() => alert("logout")}>
           <ExpandMoreIcon />
         </IconButton>
       </div>
