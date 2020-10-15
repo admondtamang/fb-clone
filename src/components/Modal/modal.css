@@ -1,0 +1,36 @@
+.modal {
+  background-color: white;
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  border-radius: 9px;
+  padding: 0 20px 10px;
+
+  flex-direction: column;
+}
+.modal__header {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+  align-items: center;
+}
+.modal__header > h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.modal__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__body > ::placeholder {
+  color: gray;
+  opacity: 0.8;
+}
+.modal__body > input {
+  font-size: 1.5rem;
+  border: none;
+  padding: 40px 0;
+  outline: none;
+}

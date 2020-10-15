@@ -2,6 +2,8 @@ import React from "react";
 import { Avatar } from "@material-ui/core";
 import "./post.css";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import ChatIcon from "@material-ui/icons/Chat";
+import ShareIcon from "@material-ui/icons/Share";
 
 export default function Post({
   profilePic,
@@ -31,12 +33,12 @@ export default function Post({
           <p>Like</p>
         </div>
         <div className="post__option">
-          <ThumbUpIcon />
-          <p>Like</p>
+          <ChatIcon />
+          <p>Chat</p>
         </div>
         <div className="post__option">
-          <ThumbUpIcon />
-          <p>Like</p>
+          <ShareIcon />
+          <p>Share</p>
         </div>
       </div>
     </div>

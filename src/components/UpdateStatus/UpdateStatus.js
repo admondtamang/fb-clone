@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import VideocamIcon from "@material-ui/icons/Videocam";
-import { Avatar } from "@material-ui/core";
+import { Avatar, Button, ModalManager } from "@material-ui/core";
 import "./updateStatus.css";
 import db from "../../firebase";
 import firebase from "firebase";
 import { useSelector } from "react-redux";
+import Modal from "../Modal/Modal";
+import PhotoIcon from "@material-ui/icons/Photo";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 
 export default function UpdateStatus() {
   const user = useSelector((state) => state.user);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClose = () => setIsOpen(false);
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const handleSubmit = (e) => {
@@ -29,31 +34,48 @@ export default function UpdateStatus() {
             className="updateStatus__input"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder={`what's on your mind?`}
+            placeholder={`what's on your mind?, ${
+              user.displayName.split(" ")[0]
+            }`}
+            onClick={() => setIsOpen(true)}
           />
-          <input
-            className="updateStatus__input"
-            placeholder="Enter Image URL"
-            value={imageUrl}
-            onChange={(e) => setImageUrl(e.target.value)}
-          />
-          <button onClick={handleSubmit} type="submit">
-            Hidden Submit
-          </button>
+          <Modal
+            open={isOpen}
+            close={handleClose}
+            className="updateStatus__modal"
+          >
+            <input
+              className="updateStatus__input"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder={`what's on your mind?`}
+              onClick={() => setIsOpen(true)}
+            />
+            <input
+              className="updateStatus__input"
+              placeholder="Enter Image URL"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+            />
+            <Button variant="contained" color="primary" onClick={handleSubmit}>
+              Post
+            </Button>
+          </Modal>
         </form>
       </div>
+
       <div className="updateStatus__bottom">
         <div className="updateStatus__option">
           <VideocamIcon style={{ color: "red" }} />
           <h3>Live Video</h3>
         </div>
         <div className="updateStatus__option">
-          <VideocamIcon style={{ color: "red" }} />
-          <h3>Live Video</h3>
+          <PhotoIcon style={{ color: "green" }} />
+          <h3>Photos/Video</h3>
         </div>
         <div className="updateStatus__option">
-          <VideocamIcon style={{ color: "red" }} />
-          <h3>Live Video</h3>
+          <InsertEmoticonIcon style={{ color: "orange" }} />
+          <h3>Feeling/Activity</h3>
         </div>
       </div>
     </div>

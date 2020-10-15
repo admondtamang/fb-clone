@@ -11,6 +11,7 @@ export default function Home() {
       <div className="app__body">
         <SideBar />
         <Feed />
+        <SideBar />
       </div>
     </>
   );
