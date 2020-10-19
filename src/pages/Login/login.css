@@ -1,27 +1,79 @@
+.login {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
 .login > .login__icon {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10vh;
+  align-items: flex-start;
 }
-.login > .login__icon > img {
+.login__icon > img {
+  height: 106px;
   object-fit: contain;
-  height: 150px;
 }
-.login {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+.login__icon > p {
+  font-size: 28px;
+  font-weight: normal;
+  margin-left: 30px;
+  width: 500px;
 }
-.login > .login__form {
+.login__form .MuiButton-root {
+  font-weight: 700;
+  font-size: medium;
+  text-transform: none;
+  color: white;
+  padding: 10px;
+}
+
+.login__right > .login__form {
+  justify-content: flex-start;
+  background-color: white;
   display: flex;
+  padding: 20px 16px;
   flex-direction: column;
   justify-content: space-evenly;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 40px 0 0;
+  /* padding: 20px 0 28px; */
+  width: 396px;
 }
 .login__input > input {
-  margin-bottom: 25px;
-  width: 60hw;
   padding: 15px;
+  width: 90%;
+  margin-bottom: 10px;
   background-color: white;
-  border-radius: 15px;
-  border: none;
+  border-radius: 6px;
   outline-width: 0;
+  background: #ffffff url(/rsrc.php/v3/yO/r/YQNfPR9MJfx.png) repeat-x;
+  border: 1px solid #dddfe2;
+  color: #1d2129;
+  font-size: medium;
+  vertical-align: middle;
+}
+
+.login__form > .login__forgot {
+  color: #1877f2;
+  text-align: center;
+  border-bottom: 1px solid #dadde1;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  font-size: small;
+}
+.login__create .MuiButton-contained {
+  background-color: forestgreen!;
+}
+.login__note {
+  margin-top: 0.8rem;
+  text-align: center;
+  font-size: small;
+}
+.login__note > span {
+  font-weight: 600;
 }
