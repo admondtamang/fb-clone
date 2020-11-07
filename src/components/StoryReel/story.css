@@ -19,12 +19,12 @@
 
 .story__avatar {
   margin: 10px;
-  border: 4px solid #2eb1f4;
+  border: 4px solid #0094dd;
 }
 .story > h4 {
   position: absolute;
   bottom: 10px;
   left: 10px;
   color: white;
-  font-size: smaller;
+  font-size: small;
 }

@@ -41,7 +41,8 @@ export default function Login() {
           </Button>
         </div>
         <p className="login__note">
-          <span>Create a Page</span> for a celebrity, band or business.
+          {/* <span>Create a Page</span> for a celebrity, band or business. */}
+          <span>Message: </span> Press login and you'll be login through google.
         </p>
       </div>
     </div>

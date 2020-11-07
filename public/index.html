@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <meta name="propeller" content="ba5c41ed1ac48f8b9f44034a30d6c8e6">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -39,5 +40,29 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCXrUDCjBjJJo9a6Tm83M0OTCbPkfaZNOE",
+    authDomain: "farmershop-a2a74.firebaseapp.com",
+    databaseURL: "https://farmershop-a2a74.firebaseio.com",
+    projectId: "farmershop-a2a74",
+    storageBucket: "farmershop-a2a74.appspot.com",
+    messagingSenderId: "150398907444",
+    appId: "1:150398907444:web:03b265e4482f0adc29c661",
+    measurementId: "G-1ZTJ122TN4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>

@@ -24,6 +24,7 @@ export default function UpdateStatus() {
       username: user.displayName,
       image: imageUrl,
     });
+    setIsOpen(false);
   };
   return (
     <div className="updateStatus">
@@ -32,8 +33,6 @@ export default function UpdateStatus() {
         <form>
           <input
             className="updateStatus__input"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
             placeholder={`what's on your mind?, ${
               user.displayName.split(" ")[0]
             }`}
@@ -67,15 +66,15 @@ export default function UpdateStatus() {
       <div className="updateStatus__bottom">
         <div className="updateStatus__option">
           <VideocamIcon style={{ color: "red" }} />
-          <h3>Live Video</h3>
+          <h5>Live Video</h5>
         </div>
         <div className="updateStatus__option">
           <PhotoIcon style={{ color: "green" }} />
-          <h3>Photos/Video</h3>
+          <h5>Photos/Video</h5>
         </div>
         <div className="updateStatus__option">
           <InsertEmoticonIcon style={{ color: "orange" }} />
-          <h3>Feeling/Activity</h3>
+          <h5>Feeling/Activity</h5>
         </div>
       </div>
     </div>

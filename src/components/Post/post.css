@@ -1,19 +1,23 @@
 .post {
-  width: 90%;
+  width: 80%;
   margin-top: 15px;
   border-radius: 15px;
   background: white;
   box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+}
+.post__container {
+  padding: 15px;
 }
 
 .post__top {
   display: flex;
   position: relative;
   align-items: center;
-  padding: 15px;
 }
 .post__image > img {
   width: 100%;
+  border-radius: 5px;
+  max-height: 75vh;
 }
 .post__avatar {
   margin-right: 10px;
@@ -40,7 +44,6 @@
   font-size: medium;
   color: gray;
   cursor: pointer;
-  padding: 15px;
 }
 
 .post__option {
@@ -56,4 +59,13 @@
 .post__option:hover {
   background: #eff2f5;
   border-radius: 10px;
+}
+
+.likeComment {
+  color: grey;
+  display: flex;
+  padding: 7px 0;
+  border-top: 1px solid lightgray;
+  margin: 0 5px;
+  justify-content: space-between;
 }
