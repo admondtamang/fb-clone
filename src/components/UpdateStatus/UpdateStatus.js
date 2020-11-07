@@ -23,6 +23,7 @@ export default function UpdateStatus() {
       profilePic: user.photoURL,
       username: user.displayName,
       image: imageUrl,
+      likes: 0,
     });
     setIsOpen(false);
   };

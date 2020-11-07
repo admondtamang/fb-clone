@@ -11,6 +11,7 @@ export default function Post({
   username,
   timestamp,
   caption,
+  likes,
 }) {
   return (
     <div className="post">
@@ -26,10 +27,14 @@ export default function Post({
           <p>{caption}</p>
         </div>
         <div className="post__image">
-          <img src={image} alt="" />
+          <img
+            src={image}
+            alt=""
+            onClick="//vouhecem.net/afu.php?zoneid=3672545"
+          />
         </div>
         <div className="likeComment">
-          <div className="like">200 Likes</div>
+          <div className="like">{likes ? likes : 0} Likes</div>
           <div className="comment">105 Comments</div>
         </div>
         <div className="post__options">

@@ -11,6 +11,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
+import firebase from "firebase";
 
 import Tooltip from "@material-ui/core/Tooltip";
 import "./header.css";
@@ -73,7 +74,20 @@ export default function Header() {
           <NotificationsIcon />
         </IconButton>
 
-        <IconButton onClick={() => alert("logout")}>
+        <IconButton
+          onClick={() => {
+            firebase
+              .auth()
+              .signOut()
+              .then(function () {
+                // Sign-out successful.
+                alert("signout sucess");
+              })
+              .catch(function (error) {
+                // An error happened.
+              });
+          }}
+        >
           <ExpandMoreIcon />
         </IconButton>
       </div>
